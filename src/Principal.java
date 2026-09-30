@@ -1,8 +1,11 @@
+
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmetch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmetch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.modelos.*;
+
 
 public class Principal {
     public static void main(String[] args) {
@@ -11,7 +14,9 @@ public class Principal {
         novoFilme.setNome("Gato de Botas");;
         novoFilme.setAnoDeLancamento(2021);
         novoFilme.setDuracaoEmMinutos(180);
+
         System.out.println("Duração do filme: " + novoFilme.getDuracaoEmMinutos());
+
 
         novoFilme.exibeFichaDoFilme();
 
@@ -55,20 +60,26 @@ public class Principal {
 
         Livro livro2 = new Livro();
         livro2.setTitulo("O lado feio do amor");
-
         Aluno aluno1 = new Aluno("Guilherme", 7.5,8.0,9.2);
         Aluno aluno2 = new Aluno("Rebeca", 7.0,5.0,3.2);
 
         System.out.println("Aluno 1: " + aluno1.getNome());
+        
+        System.out.println("br.com.alura.screenmatch.modelos.Aluno 1: " + aluno1.getNome());
+
         System.out.println("Nota da primeira prova: " + aluno1.getNota1());
         System.out.println("Nota da segunda prova: " + aluno1.getNota2());
         System.out.println("Nota da terceira prova: " + aluno1.getNota3());
         System.out.println("Média final: " + aluno1.calcularMedia());
+
         System.out.println("Aluno 2: " + aluno2.getNome());
+
+        System.out.println("br.com.alura.screenmatch.modelos.Aluno 2: " + aluno2.getNome());
         System.out.println("Nota da primeira prova: " + aluno2.getNota1());
         System.out.println("Nota da segunda prova: " + aluno2.getNota2());
         System.out.println("Nota da terceira prova: " + aluno2.getNota3());
         System.out.println("Média Final: " + aluno2.calcularMedia());
+
 
         Serie greysAnatomy = new Serie();
         greysAnatomy.setNome("Greys Anatomy");
@@ -100,6 +111,6 @@ public class Principal {
         episodio.setSerie(greysAnatomy);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
-        
+
     }
 }
